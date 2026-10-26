@@ -1,10 +1,9 @@
 #include <stdio.h>
-#include <math.h>
 #include "library/trigonometria.h"
 
 int main () {
-	float sineValue = asine(sqrt(3), 2);
-	printf("Sine value: %g", sineValue);
+	float test = radToDegree(PI / 5);
+	printf("Value: %g", test);
 
 	return 0;
 }
