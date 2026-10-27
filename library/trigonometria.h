@@ -1,6 +1,7 @@
-
 #ifndef TRIGONOMETRIA_H
 #define TRIGONOMETRIA_H
+
+#include "structures.h"
 
 // Circle constants.
 extern const float PI;
@@ -26,5 +27,14 @@ float acosine(float adjacentSide, float hypotenuse);
 
 // Returns the tangent value.
 float atangent(float oppositeSide, float adjacentSide);
+
+// Returns triangle data based on passed data
+// data with zero value means "i dont know this value"
+// TODO: this functions is not complete
+TriangleData returnTriangleData(TrianglePreviusData infos);
+
+// Trigonometric Circle
+// sinTheta = x / radius | x = radius * sinTheta
+// cosTheta = x / radius | x = radius * cosTheta
 
 #endif

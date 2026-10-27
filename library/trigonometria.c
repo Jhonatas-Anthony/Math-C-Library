@@ -1,4 +1,5 @@
 #include "trigonometria.h"
+#include "structures.h"
 
 const float PI = 3.14159265358979323846;
 const float circleDegree = 360.0;
@@ -28,4 +29,22 @@ float acosine(float adjacentSide, float hypotenuse) {
 // Returns the tangent value.
 float atangent(float oppositeSide, float adjacentSide) {
   return oppositeSide / adjacentSide;
+}
+
+// TODO: This function is not complete
+TriangleData returnTriangleData(TrianglePreviusData infos) {
+  if (infos.oppositeSideValue > 0 && infos.hypotenuseValue > 0) {
+    // It is possible to calculate the sine value
+    asine(infos.oppositeSideValue, infos.hypotenuseValue);
+  } else if (infos.adjacentSideValue > 0 && infos.hypotenuseValue) {
+    // It is possible to calculate the cosine value
+    acosine(infos.adjacentSideValue, infos.hypotenuseValue);
+  } else if (infos.adjacentSideValue > 0 && infos.oppositeSideValue > 0) {
+    // It is possible to calculate the hypotenuse value
+    atangent(infos.adjacentSideValue, infos.oppositeSideValue);
+  }
+
+  TriangleData data;
+
+  return data;
 }
